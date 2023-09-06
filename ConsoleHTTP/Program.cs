@@ -10,7 +10,7 @@ internal class Program
         {
             string userInput = Console.ReadLine();
             WebsiteHandler handler = new WebsiteHandler();
-            if (userInput != null)
+            if (!string.IsNullOrWhiteSpace(userInput))
             {
                 Console.WriteLine(await handler.HandleRequest(userInput, client));
             }
